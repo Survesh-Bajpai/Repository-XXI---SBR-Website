@@ -3,113 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survesh Bajpai Research - Quant Research & Portfolio Strategies</title>
+    <title>Survesh Bajpai Research - Advanced Quantitative Research & Portfolio Strategies</title>
+
+    <!-- Add required libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Add Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Header -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
                 <i class="fas fa-chart-line"></i>
                 <span>Survesh Bajpai Research</span>
             </div>
+
             <div class="nav-menu">
-                <a href="#" class="nav-item active" data-section="home">Home</a>
-                <a href="#" class="nav-item" data-section="quant">Quant Research</a>
-                <a href="#" class="nav-item" data-section="education">Courses</a>
-                <a href="#" class="nav-item" data-section="about">About</a>
-                <div class="nav-actions">
-                    <button class="theme-toggle" id="themeToggle">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button class="btn btn--primary btn--sm" id="loginBtn">Login</button>
-                    <div class="user-menu hidden" id="userMenu">
-                        <span class="username" id="username"></span>
-                        <button class="btn btn--secondary btn--sm" id="logoutBtn">Logout</button>
-                    </div>
-                </div>
+                <div class="nav-item active" data-section="home">Home</div>
+                <div class="nav-item" data-section="quant">Quant Research</div>
+                <div class="nav-item" data-section="education">Education</div>
+                <div class="nav-item" data-section="about">About</div>
+            </div>
+
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <div class="main-content">
         <!-- Home Section -->
         <section id="home" class="section active">
-            <div class="hero">
-                <div class="hero-content">
-                    <div class="hero-text">
+            <div class="container">
+                <!-- Hero Section -->
+                <div class="hero">
+                    <div class="hero-content">
                         <h1 class="hero-title">Advanced Quantitative Research & Portfolio Strategies</h1>
                         <p class="hero-subtitle">Professional B2B SaaS & PaaS solutions with proprietary Quant valuation models and comprehensive Finance Career education</p>
                         <div class="hero-actions">
                             <button class="btn btn--primary btn--lg" data-section="quant">Explore Research</button>
-                            <button class="btn btn--outline btn--lg" data-section="education">View Courses</button>
+                            <button class="btn btn--secondary btn--lg" data-section="education">Start Learning</button>
                         </div>
                     </div>
                     <div class="hero-visual">
-                        <div class="chart-container" style="position: relative; height: 300px;">
-                            <canvas id="heroChart"></canvas>
+                        <canvas id="heroChart" width="400" height="300"></canvas>
+                    </div>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="metric-info">
+                            <div class="metric-number" data-target="500">0</div>
+                            <p class="metric-label">NIFTY Stocks Covered</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="metric-info">
+                            <div class="metric-number" data-target="18">0</div>
+                            <p class="metric-label">Certifications Offered</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="metric-info">
+                            <div class="metric-number" data-target="1000">0</div>
+                            <p class="metric-label">Students Trained</p>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="metric-info">
+                            <div class="metric-number" data-target="98">0</div>
+                            <p class="metric-label">Success Rate %</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="metric-content">
-                        <h3 class="metric-number" data-count="500">0</h3>
-                        <p class="metric-label">NIFTY Stocks Covered</p>
+
+                <!-- Free Pre-recorded Courses Section -->
+                <div class="features-showcase">
+                    <h2>Free Pre-recorded Courses</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Fundamental Analysis</h3>
+                            <p>Master the art of fundamental analysis with our comprehensive video series covering financial statement analysis, valuation techniques, and investment decisions.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-video"></i> 25+ Videos</span>
+                                <span><i class="fas fa-clock"></i> 15+ Hours</span>
+                            </div>
+                            <a href="https://youtube.com/playlist?list=PLmwW7F4mrhmHcKgAGr0khKApuzh0Fhjoo" target="_blank" class="btn btn--primary">Watch Now</a>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>Quantitative Analysis</h3>
+                            <p>Dive deep into quantitative methods, statistical modeling, and mathematical finance with practical applications in portfolio management.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-video"></i> 20+ Videos</span>
+                                <span><i class="fas fa-clock"></i> 12+ Hours</span>
+                            </div>
+                            <a href="https://youtube.com/playlist?list=PLmwW7F4mrhmFvaUvLQX0H8iNkdR_WeUjz" target="_blank" class="btn btn--primary">Watch Now</a>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-area"></i>
+                            </div>
+                            <h3>Technical Analysis</h3>
+                            <p>Learn chart patterns, technical indicators, and market psychology to make informed trading and investment decisions.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-video"></i> 30+ Videos</span>
+                                <span><i class="fas fa-clock"></i> 18+ Hours</span>
+                            </div>
+                            <a href="https://youtube.com/playlist?list=PLmwW7F4mrhmFdCuWR9LvrNGoRXqLq4nMr" target="_blank" class="btn btn--primary">Watch Now</a>
+                        </div>
                     </div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="metric-content">
-                        <h3 class="metric-number" data-count="15">0</h3>
-                        <p class="metric-label">Certifications Offered</p>
-                    </div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon"><i class="fas fa-users"></i></div>
-                    <div class="metric-content">
-                        <h3 class="metric-number" data-count="1000">0</h3>
-                        <p class="metric-label">Students Trained</p>
-                    </div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="metric-content">
-                        <h3 class="metric-number" data-count="98">0</h3>
-                        <p class="metric-label">Success Rate %</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="features-showcase">
-                <h2>Platform Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-brain"></i></div>
-                        <h3>AI-Powered Analytics</h3>
-                        <p>Advanced machine learning algorithms for portfolio optimization and risk management</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3>Risk Management</h3>
-                        <p>Comprehensive risk analysis with VaR models and Monte Carlo simulations</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
-                        <h3>Portfolio Construction</h3>
-                        <p>Multi-factor filtering with proprietary QVM scoring methodology</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <h3>Career Development</h3>
-                        <p>Comprehensive certification programs for finance professionals</p>
+
+                <!-- Platform Features -->
+                <div class="features-showcase">
+                    <h2>Platform Features</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>AI-Powered Analytics</h3>
+                            <p>Advanced machine learning algorithms for portfolio optimization and risk management</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Risk Management</h3>
+                            <p>Comprehensive risk analysis with VaR models and Monte Carlo simulations</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Portfolio Construction</h3>
+                            <p>Multi-factor filtering with proprietary QVM scoring methodology</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Career Development</h3>
+                            <p>Comprehensive certification programs for finance professionals</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -117,114 +178,113 @@
 
         <!-- Quant Research Section -->
         <section id="quant" class="section">
-            <div class="section-header">
-                <h1>Quant Research & Portfolio Strategies</h1>
-                <p>Proprietary research platform with comprehensive NIFTY500 coverage</p>
-            </div>
-            
-            <div class="research-tabs">
-                <button class="tab-btn active" data-tab="stocks">Stock Universe</button>
-                <button class="tab-btn" data-tab="sectors">Sector Analysis</button>
-                <button class="tab-btn" data-tab="portfolio">Portfolio Builder</button>
-                <button class="tab-btn" data-tab="dcf">DCF Analysis</button>
-            </div>
-            
-            <div class="tab-content">
-                <!-- Stock Universe Tab -->
-                <div id="stocks" class="tab-panel active">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Quant Research & Portfolio Strategies</h1>
+                    <p>Proprietary research platform with comprehensive NIFTY500 coverage</p>
+                </div>
+
+                <!-- Research Tabs -->
+                <div class="research-tabs">
+                    <button class="tab-btn active" data-tab="sector-beta">Sector Beta Distribution</button>
+                    <button class="tab-btn" data-tab="risk-return">Risk-Return Matrix</button>
+                    <button class="tab-btn" data-tab="portfolio-builder">Multi-Factor Filtering</button>
+                    <button class="tab-btn" data-tab="dcf-calculator">DCF Valuation Calculator</button>
+                </div>
+
+                <!-- Tab Panels -->
+                <div id="sector-beta" class="tab-panel active">
+                    <div class="charts-row">
+                        <div class="chart-container">
+                            <h3>Sector Beta Distribution</h3>
+                            <canvas id="sectorBetaChart" width="400" height="300"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Risk-Return Matrix</h3>
+                            <canvas id="riskReturnChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="risk-return" class="tab-panel">
                     <div class="filters-bar">
-                        <select class="form-control" id="sectorFilter">
+                        <select id="sectorFilter" class="form-control">
                             <option value="">All Sectors</option>
                             <option value="IT Software">IT Software</option>
                             <option value="Banks">Banks</option>
                             <option value="FMCG">FMCG</option>
-                            <option value="Financial Services">Financial Services</option>
-                            <option value="Telecom Services">Telecom Services</option>
                             <option value="Refineries">Refineries</option>
+                            <option value="Telecom Services">Telecom Services</option>
+                            <option value="Financial Services">Financial Services</option>
                         </select>
-                        <select class="form-control" id="qvmFilter">
-                            <option value="">All QVM Scores</option>
+                        <select id="qvmFilter" class="form-control">
+                            <option value="">All QVM Ratings</option>
                             <option value="high">High (>2.0)</option>
                             <option value="medium">Medium (1.0-2.0)</option>
                             <option value="low">Low (<1.0)</option>
                         </select>
-                        <input type="text" class="form-control" id="searchStock" placeholder="Search stocks...">
                     </div>
-                    
-                    <div class="stocks-grid" id="stocksGrid">
-                        <!-- Stocks will be populated by JavaScript -->
-                    </div>
+                    <div id="stocksGrid" class="stocks-grid"></div>
                 </div>
-                
-                <!-- Sector Analysis Tab -->
-                <div id="sectors" class="tab-panel">
-                    <div class="charts-row">
-                        <div class="chart-container" style="position: relative; height: 400px;">
-                            <h3>Sector Beta Distribution</h3>
-                            <canvas id="sectorBetaChart"></canvas>
-                        </div>
-                        <div class="chart-container" style="position: relative; height: 400px;">
-                            <h3>Risk-Return Matrix</h3>
-                            <canvas id="riskReturnChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Builder Tab -->
-                <div id="portfolio" class="tab-panel">
+
+                <div id="portfolio-builder" class="tab-panel">
                     <div class="portfolio-builder">
                         <div class="portfolio-filters">
-                            <h3>Multi-Factor Filtering</h3>
+                            <h3>Portfolio Filters</h3>
                             <div class="filter-group">
-                                <label>QVM Score Range</label>
-                                <input type="range" id="qvmRange" min="0" max="3" step="0.1" value="1">
-                                <span id="qvmValue">1.0</span>
+                                <label>Forward PE Range</label>
+                                <input type="range" id="peRange" min="5" max="60" value="30">
+                                <span id="peValue">30</span>
                             </div>
                             <div class="filter-group">
-                                <label>Sharpe Ratio Range</label>
-                                <input type="range" id="sharpeRange" min="0" max="1" step="0.01" value="0.2">
-                                <span id="sharpeValue">0.20</span>
+                                <label>Forward ROE Range</label>
+                                <input type="range" id="roeRange" min="10" max="90" value="50">
+                                <span id="roeValue">50</span>
                             </div>
                             <div class="filter-group">
                                 <label>Beta Range</label>
-                                <input type="range" id="betaRange" min="0.5" max="1.5" step="0.01" value="1">
-                                <span id="betaValue">1.00</span>
+                                <input type="range" id="betaRange" min="0.5" max="1.5" step="0.1" value="1.0">
+                                <span id="betaValue">1.0</span>
                             </div>
+                            <button id="filterPortfolio" class="btn btn--primary btn--full-width">Apply Filters</button>
                         </div>
                         <div class="portfolio-results">
                             <h3>Filtered Portfolio</h3>
-                            <div id="portfolioStocks" class="portfolio-stocks">
-                                <!-- Filtered stocks will appear here -->
-                            </div>
+                            <div id="portfolioStocks" class="portfolio-stocks"></div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- DCF Analysis Tab -->
-                <div id="dcf" class="tab-panel">
+
+                <div id="dcf-calculator" class="tab-panel">
                     <div class="dcf-calculator">
                         <h3>DCF Valuation Calculator</h3>
                         <div class="dcf-inputs">
                             <div class="input-group">
-                                <label>Free Cash Flow (Cr)</label>
-                                <input type="number" class="form-control" id="fcf" value="1000">
+                                <label>Current FCF (₹ Cr)</label>
+                                <input type="number" id="currentFCF" class="form-control" placeholder="1000">
                             </div>
                             <div class="input-group">
                                 <label>Growth Rate (%)</label>
-                                <input type="number" class="form-control" id="growthRate" value="15">
+                                <input type="number" id="growthRate" class="form-control" placeholder="15">
                             </div>
                             <div class="input-group">
-                                <label>Terminal Growth (%)</label>
-                                <input type="number" class="form-control" id="terminalGrowth" value="3">
+                                <label>Terminal Growth Rate (%)</label>
+                                <input type="number" id="terminalGrowth" class="form-control" placeholder="3">
                             </div>
                             <div class="input-group">
-                                <label>Discount Rate (%)</label>
-                                <input type="number" class="form-control" id="discountRate" value="10">
+                                <label>Discount Rate (WACC) (%)</label>
+                                <input type="number" id="discountRate" class="form-control" placeholder="12">
                             </div>
-                            <button class="btn btn--primary" id="calculateDCF">Calculate DCF</button>
+                            <div class="input-group">
+                                <label>Years</label>
+                                <input type="number" id="years" class="form-control" placeholder="10">
+                            </div>
                         </div>
-                        <div class="dcf-results" id="dcfResults">
-                            <!-- DCF results will appear here -->
+                        <button id="calculateDCF" class="btn btn--primary btn--full-width">Calculate Intrinsic Value</button>
+                        <div id="dcfResults" class="dcf-results hidden">
+                            <h4>Valuation Results</h4>
+                            <p>Enterprise Value: <span id="enterpriseValue"></span></p>
+                            <p>Intrinsic Value per Share: <span id="intrinsicValue"></span></p>
                         </div>
                     </div>
                 </div>
@@ -233,202 +293,177 @@
 
         <!-- Education Section -->
         <section id="education" class="section">
-            <div class="section-header">
-                <h1>Educational Courses & Career Development</h1>
-                <p>Professional finance certifications with proprietary curriculum</p>
-            </div>
-            
-            <div class="education-tabs">
-                <button class="tab-btn active" data-tab="courses">Courses</button>
-                <button class="tab-btn" data-tab="certifications">Certifications</button>
-                <button class="tab-btn" data-tab="roi">ROI Calculator</button>
-                <button class="tab-btn" data-tab="career">Career Path</button>
-            </div>
-            
-            <div class="tab-content">
-                <!-- Courses Tab -->
-                <div id="courses" class="tab-panel active">
-                    <div class="courses-grid">
-                        <div class="course-card">
-                            <div class="course-header">
-                                <h3>Quant Expert Trader</h3>
-                                <div class="course-price">₹72,000</div>
+            <div class="container">
+                <div class="section-header">
+                    <h1>Educational Courses & Career Development</h1>
+                    <p>Professional finance certifications with proprietary curriculum</p>
+                </div>
+
+                <!-- Free Courses Section -->
+                <div class="combo-section">
+                    <h3>Free Pre-recorded Video Courses</h3>
+                    <div class="combo-grid">
+                        <div class="combo-card">
+                            <h4>Fundamental Analysis</h4>
+                            <p>Complete video series on fundamental analysis techniques, financial statement analysis, and valuation methods.</p>
+                            <div class="combo-price">FREE</div>
+                            <div class="course-meta">
+                                <span><i class="fas fa-video"></i> 25+ Videos</span>
+                                <span><i class="fas fa-clock"></i> 15+ Hours</span>
                             </div>
-                            <div class="course-details">
-                                <div class="course-meta">
-                                    <span><i class="fas fa-clock"></i> 60 Hours</span>
-                                    <span><i class="fas fa-users"></i> 20 Sessions</span>
-                                </div>
-                                <div class="course-modules">
-                                    <div class="module">Economics & Market Fundamentals</div>
-                                    <div class="module">Technical Analysis & Derivatives</div>
-                                    <div class="module">Trading Psychology & Risk Management</div>
-                                </div>
-                                <button class="btn btn--primary btn--full-width">Enroll Now</button>
-                            </div>
+                            <a href="https://youtube.com/playlist?list=PLmwW7F4mrhmHcKgAGr0khKApuzh0Fhjoo" target="_blank" class="btn btn--primary btn--full-width">Watch Playlist</a>
                         </div>
-                        
-                        <div class="course-card">
-                            <div class="course-header">
-                                <h3>Quant Expert Investor</h3>
-                                <div class="course-price">₹72,000</div>
+                        <div class="combo-card">
+                            <h4>Quantitative Analysis</h4>
+                            <p>Mathematical finance, statistical modeling, and quantitative methods for portfolio management and risk analysis.</p>
+                            <div class="combo-price">FREE</div>
+                            <div class="course-meta">
+                                <span><i class="fas fa-video"></i> 20+ Videos</span>
+                                <span><i class="fas fa-clock"></i> 12+ Hours</span>
                             </div>
-                            <div class="course-details">
-                                <div class="course-meta">
-                                    <span><i class="fas fa-clock"></i> 60 Hours</span>
-                                    <span><i class="fas fa-users"></i> 20 Sessions</span>
-                                </div>
-                                <div class="course-modules">
-                                    <div class="module">Portfolio Construction & CAPM</div>
-                                    <div class="module">Risk Analysis & Forecasting</div>
-                                    <div class="module">Rebalancing & Optimization</div>
-                                </div>
-                                <button class="btn btn--primary btn--full-width">Enroll Now</button>
-                            </div>
+                            <a href="https://youtube.com/playlist?list=PLmwW7F4mrhmFvaUvLQX0H8iNkdR_WeUjz" target="_blank" class="btn btn--primary btn--full-width">Watch Playlist</a>
                         </div>
-                        
-                        <div class="course-card featured">
-                            <div class="course-header">
-                                <h3>AI Algo Trader</h3>
-                                <div class="course-price">₹36,000</div>
-                                <div class="featured-badge">Popular</div>
+                        <div class="combo-card">
+                            <h4>Technical Analysis</h4>
+                            <p>Chart patterns, technical indicators, market psychology, and trading strategies for informed decision making.</p>
+                            <div class="combo-price">FREE</div>
+                            <div class="course-meta">
+                                <span><i class="fas fa-video"></i> 30+ Videos</span>
+                                <span><i class="fas fa-clock"></i> 18+ Hours</span>
                             </div>
-                            <div class="course-details">
-                                <div class="course-meta">
-                                    <span><i class="fas fa-clock"></i> 30 Hours</span>
-                                    <span><i class="fas fa-users"></i> 10 Sessions</span>
-                                </div>
-                                <div class="course-modules">
-                                    <div class="module">Python Programming & Automation</div>
-                                    <div class="module">Trading Strategy Development</div>
-                                    <div class="module">End-to-End Implementation</div>
-                                </div>
-                                <button class="btn btn--primary btn--full-width">Enroll Now</button>
-                            </div>
-                        </div>
-                        
-                        <div class="course-card">
-                            <div class="course-header">
-                                <h3>AI Algo Investor</h3>
-                                <div class="course-price">₹36,000</div>
-                            </div>
-                            <div class="course-details">
-                                <div class="course-meta">
-                                    <span><i class="fas fa-clock"></i> 30 Hours</span>
-                                    <span><i class="fas fa-users"></i> 10 Sessions</span>
-                                </div>
-                                <div class="course-modules">
-                                    <div class="module">Advanced Python & AI</div>
-                                    <div class="module">LSTM Modeling & PMS</div>
-                                    <div class="module">Automated Portfolio Management</div>
-                                </div>
-                                <button class="btn btn--primary btn--full-width">Enroll Now</button>
-                            </div>
+                            <a href="https://youtube.com/playlist?list=PLmwW7F4mrhmFdCuWR9LvrNGoRXqLq4nMr" target="_blank" class="btn btn--primary btn--full-width">Watch Playlist</a>
                         </div>
                     </div>
-                    
+                </div>
+
+                <!-- Education Tabs -->
+                <div class="education-tabs">
+                    <button class="tab-btn active" data-tab="quant-courses">Quant Courses</button>
+                    <button class="tab-btn" data-tab="combo-packages">Combo Packages</button>
+                    <button class="tab-btn" data-tab="certifications">Certifications</button>
+                    <button class="tab-btn" data-tab="roi-calculator">ROI Calculator</button>
+                    <button class="tab-btn" data-tab="career-path">Career Path</button>
+                </div>
+
+                <!-- Tab Panels -->
+                <div id="quant-courses" class="tab-panel active">
+                    <div class="courses-grid" id="coursesGrid">
+                        <!-- Courses will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div id="combo-packages" class="tab-panel">
                     <div class="combo-section">
                         <h3>Combo Packages</h3>
                         <div class="combo-grid">
                             <div class="combo-card">
                                 <h4>Quant Expert Complete</h4>
-                                <div class="combo-price">₹1,20,000 <span class="original-price">₹1,44,000</span></div>
-                                <p>Trader + Investor (40 Sessions, 120 Hours)</p>
-                                <button class="btn btn--outline">Select Package</button>
+                                <p>Trader + Investor</p>
+                                <div class="combo-price">₹1,25,000</div>
+                                <div class="original-price">₹1,44,000</div>
+                                <div class="course-meta">
+                                    <span>40 Sessions</span>
+                                    <span>120 Hours</span>
+                                </div>
+                                <button class="btn btn--primary btn--full-width">Contact for Enrollment</button>
                             </div>
                             <div class="combo-card">
                                 <h4>Quant Trader Complete</h4>
-                                <div class="combo-price">₹90,000 <span class="original-price">₹1,08,000</span></div>
-                                <p>Expert + AI Algo (30 Sessions, 90 Hours)</p>
-                                <button class="btn btn--outline">Select Package</button>
+                                <p>Expert + AI Algo</p>
+                                <div class="combo-price">₹95,000</div>
+                                <div class="original-price">₹1,08,000</div>
+                                <div class="course-meta">
+                                    <span>30 Sessions</span>
+                                    <span>90 Hours</span>
+                                </div>
+                                <button class="btn btn--primary btn--full-width">Contact for Enrollment</button>
                             </div>
                             <div class="combo-card">
                                 <h4>Quant Investor Complete</h4>
-                                <div class="combo-price">₹90,000 <span class="original-price">₹1,08,000</span></div>
-                                <p>Expert + AI Algo (30 Sessions, 90 Hours)</p>
-                                <button class="btn btn--outline">Select Package</button>
+                                <p>Expert + AI Algo</p>
+                                <div class="combo-price">₹95,000</div>
+                                <div class="original-price">₹1,08,000</div>
+                                <div class="course-meta">
+                                    <span>30 Sessions</span>
+                                    <span>90 Hours</span>
+                                </div>
+                                <button class="btn btn--primary btn--full-width">Contact for Enrollment</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Certifications Tab -->
+
                 <div id="certifications" class="tab-panel">
                     <div class="cert-categories">
                         <div class="cert-category">
                             <h3>US Certifications</h3>
-                            <div class="cert-list">
-                                <div class="cert-item">
-                                    <h4>CFA (Chartered Financial Analyst)</h4>
-                                    <p>Global gold standard for investment professionals</p>
-                                    <div class="cert-stats">
-                                        <span class="difficulty">Difficulty: 8.3/10</span>
-                                        <span class="salary">Avg Salary: ₹100L</span>
-                                    </div>
+                            <div class="cert-item">
+                                <h4>CFA (Chartered Financial Analyst)</h4>
+                                <p>Global gold standard for investment professionals</p>
+                                <div class="cert-stats">
+                                    <span class="difficulty">Difficulty: 8.3/10</span>
+                                    <span class="salary">Salary: $100K+</span>
                                 </div>
-                                <div class="cert-item">
-                                    <h4>CMT (Chartered Market Technician)</h4>
-                                    <p>Premier credential for technical analysis</p>
-                                    <div class="cert-stats">
-                                        <span class="difficulty">Difficulty: 7.3/10</span>
-                                        <span class="salary">Avg Salary: ₹50L</span>
-                                    </div>
+                            </div>
+                            <div class="cert-item">
+                                <h4>CMT (Chartered Market Technician)</h4>
+                                <p>Premier credential for technical analysis</p>
+                                <div class="cert-stats">
+                                    <span class="difficulty">Difficulty: 7.3/10</span>
+                                    <span class="salary">Salary: $50K+</span>
                                 </div>
-                                <div class="cert-item">
-                                    <h4>CFP (Certified Financial Planner)</h4>
-                                    <p>Comprehensive financial planning certification</p>
-                                    <div class="cert-stats">
-                                        <span class="difficulty">Difficulty: 6.8/10</span>
-                                        <span class="salary">Avg Salary: ₹35L</span>
-                                    </div>
+                            </div>
+                            <div class="cert-item">
+                                <h4>CFP (Certified Financial Planner)</h4>
+                                <p>Comprehensive financial planning certification</p>
+                                <div class="cert-stats">
+                                    <span class="difficulty">Difficulty: 7.8/10</span>
+                                    <span class="salary">Salary: $75K+</span>
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="cert-category">
                             <h3>Indian (NISM) Certifications</h3>
-                            <div class="cert-list">
-                                <div class="cert-item">
-                                    <h4>NISM Series 15 (Research Analyst)</h4>
-                                    <p>Research analysis and equity recommendations</p>
-                                    <div class="cert-stats">
-                                        <span class="difficulty">Difficulty: 5.9/10</span>
-                                        <span class="salary">Avg Salary: ₹35L</span>
-                                    </div>
+                            <div class="cert-item">
+                                <h4>NISM Series 15 (Research Analyst)</h4>
+                                <p>Research analysis and equity recommendations</p>
+                                <div class="cert-stats">
+                                    <span class="difficulty">Difficulty: 5.9/10</span>
+                                    <span class="salary">Salary: ₹35L+</span>
                                 </div>
-                                <div class="cert-item">
-                                    <h4>NISM Series 21B (Investment Advisor)</h4>
-                                    <p>Investment advisory services certification</p>
-                                    <div class="cert-stats">
-                                        <span class="difficulty">Difficulty: 6.9/10</span>
-                                        <span class="salary">Avg Salary: ₹50L</span>
-                                    </div>
+                            </div>
+                            <div class="cert-item">
+                                <h4>NISM Series 21B (Investment Advisor)</h4>
+                                <p>Investment advisory services certification</p>
+                                <div class="cert-stats">
+                                    <span class="difficulty">Difficulty: 6.9/10</span>
+                                    <span class="salary">Salary: ₹50L+</span>
                                 </div>
-                                <div class="cert-item">
-                                    <h4>NISM Series 19C (Portfolio Manager)</h4>
-                                    <p>Portfolio management services certification</p>
-                                    <div class="cert-stats">
-                                        <span class="difficulty">Difficulty: 6.9/10</span>
-                                        <span class="salary">Avg Salary: ₹40L</span>
-                                    </div>
+                            </div>
+                            <div class="cert-item">
+                                <h4>NISM Series 19C (Portfolio Manager)</h4>
+                                <p>Portfolio management services certification</p>
+                                <div class="cert-stats">
+                                    <span class="difficulty">Difficulty: 7.5/10</span>
+                                    <span class="salary">Salary: ₹75L+</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- ROI Calculator Tab -->
-                <div id="roi" class="tab-panel">
+
+                <div id="roi-calculator" class="tab-panel">
                     <div class="roi-calculator">
                         <h3>Certification ROI Calculator</h3>
                         <div class="roi-inputs">
                             <div class="input-group">
-                                <label>Current Salary (₹ Lakhs)</label>
-                                <input type="number" class="form-control" id="currentSalary" value="8">
+                                <label>Current Salary (₹ LPA)</label>
+                                <input type="number" id="currentSalary" class="form-control" placeholder="10">
                             </div>
                             <div class="input-group">
-                                <label>Select Certification</label>
-                                <select class="form-control" id="certSelect">
+                                <label>Target Certification</label>
+                                <select id="targetCert" class="form-control">
+                                    <option value="">Select Certification</option>
                                     <option value="cfa">CFA Level 3</option>
                                     <option value="nism15">NISM Series 15</option>
                                     <option value="nism21b">NISM Series 21B</option>
@@ -436,22 +471,21 @@
                                 </select>
                             </div>
                             <div class="input-group">
-                                <label>Years to Calculate ROI</label>
-                                <input type="number" class="form-control" id="roiYears" value="5">
+                                <label>Years Experience</label>
+                                <input type="number" id="experience" class="form-control" placeholder="5">
                             </div>
-                            <button class="btn btn--primary" id="calculateROI">Calculate ROI</button>
                         </div>
-                        <div class="roi-results" id="roiResults">
-                            <div class="chart-container" style="position: relative; height: 300px;">
-                                <canvas id="roiChart"></canvas>
-                            </div>
+                        <button id="calculateROI" class="btn btn--primary btn--full-width">Calculate ROI</button>
+                        <div id="roiResults" class="roi-results hidden">
+                            <h4>ROI Analysis</h4>
+                            <p>Projected Salary Increase: <span id="salaryIncrease"></span></p>
+                            <p>Return on Investment: <span id="roiScore"></span></p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Career Path Tab -->
-                <div id="career" class="tab-panel">
-                    <div class="career-path">
+
+                <div id="career-path" class="tab-panel">
+                    <div class="career-path-simulator">
                         <h3>Career Path Simulator</h3>
                         <div class="path-selection">
                             <div class="path-option" data-path="trading">
@@ -459,7 +493,7 @@
                                 <h4>Trading Path</h4>
                                 <p>Focus on market analysis and trading strategies</p>
                             </div>
-                            <div class="path-option" data-path="investing">
+                            <div class="path-option" data-path="investment">
                                 <i class="fas fa-briefcase"></i>
                                 <h4>Investment Management</h4>
                                 <p>Portfolio management and investment advisory</p>
@@ -470,8 +504,9 @@
                                 <p>Equity research and fundamental analysis</p>
                             </div>
                         </div>
-                        <div class="career-roadmap" id="careerRoadmap">
-                            <!-- Career roadmap will be populated by JavaScript -->
+                        <div id="careerRoadmap" class="career-roadmap hidden">
+                            <h4>Your Career Roadmap</h4>
+                            <div id="roadmapContent"></div>
                         </div>
                     </div>
                 </div>
@@ -480,34 +515,32 @@
 
         <!-- About Section -->
         <section id="about" class="section">
-            <div class="section-header">
-                <h1>About Survesh Bajpai Research</h1>
-                <p>Leading Quant Research & Portfolio Strategies Platform</p>
-            </div>
-            
-            <div class="about-content">
-                <div class="founder-profile">
-                    <div class="profile-image">
-                        <div class="profile-placeholder">
-                            <i class="fas fa-user"></i>
+            <div class="container">
+                <div class="about-content">
+                    <div class="section-header">
+                        <h1>About Survesh Bajpai Research</h1>
+                        <p>Leading Quant Research & Portfolio Strategies Platform</p>
+                    </div>
+
+                    <div class="founder-profile">
+                        <div class="profile-image">
+                            <div class="profile-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="profile-info">
+                            <h2>Survesh Bajpai</h2>
+                            <h3>Quant Portfolio Research Scientist</h3>
+                            <div class="credentials">
+                                <span class="credential">CFA</span>
+                                <span class="credential">Quant Expert</span>
+                                <span class="credential">Portfolio Scientist</span>
+                            </div>
+                            <p>Leading expert in quantitative research and portfolio strategies with extensive experience in developing proprietary valuation models and educational frameworks for finance professionals.</p>
+                            <button class="btn btn--primary">LinkedIn Profile</button>
                         </div>
                     </div>
-                    <div class="profile-info">
-                        <h2>Survesh Bajpai</h2>
-                        <h3>Quant Portfolio Research Scientist</h3>
-                        <div class="credentials">
-                            <span class="credential">SEBI-NISM'25 RA/IA/PM</span>
-                            <span class="credential">WQU</span>
-                            <span class="credential">IIMBx</span>
-                        </div>
-                        <p>Leading expert in quantitative research and portfolio strategies with extensive experience in developing proprietary valuation models and educational frameworks for finance professionals.</p>
-                        <a href="https://www.linkedin.com/in/survesh-bajpai" target="_blank" class="btn btn--outline">
-                            <i class="fab fa-linkedin"></i> LinkedIn Profile
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="company-info">
+
                     <div class="info-grid">
                         <div class="info-card">
                             <h3>Mission</h3>
@@ -541,45 +574,12 @@
                 </div>
             </div>
         </section>
-    </main>
-
-    <!-- Login Modal -->
-    <div class="modal hidden" id="loginModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle">Login</h2>
-                <button class="modal-close" id="modalClose">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form id="authForm">
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" required>
-                    </div>
-                    <div class="form-group signup-only hidden">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="fullName">
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full-width" id="authSubmit">Login</button>
-                </form>
-                <div class="auth-switch">
-                    <p>Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
-                    <p class="signup-only hidden">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
-                </div>
-            </div>
-        </div>
     </div>
 
-    <!-- Loading Spinner -->
-    <div class="loading-spinner hidden" id="loadingSpinner">
-        <div class="spinner"></div>
-    </div>
+    <!-- Notifications Container -->
+    <div id="notifications" class="notifications"></div>
 
+    <!-- JavaScript -->
     <script src="app.js"></script>
 </body>
 </html>
