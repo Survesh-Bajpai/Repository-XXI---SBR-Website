@@ -51,10 +51,3 @@
 - ✅ Safari 13+
 - ✅ Edge 80+
 
-## 🎯 Ready to Use
-
-Simply open `index.html` in your browser and enjoy a fully functional quantitative research platform!
-
----
-Created by: Perplexity AI Assistant
-Date: August 2025
